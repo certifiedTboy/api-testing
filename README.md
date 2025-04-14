@@ -61,7 +61,7 @@ $ npm run dev (Development server)
 # Run test
 $ npm run test
 
-# The app will run on <http://localhost:5173/>
+# The app will run on <http://localhost:3000/>
 ```
 
 <a href="">Voila!</a> <a href="#top">Back to top</a>
