@@ -4,7 +4,6 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 let mongo: any;
 
 beforeAll(async () => {
-  process.env.JWT_KEY = "testkey";
   mongo = await MongoMemoryServer.create();
   const mongoUri = mongo.getUri();
 
