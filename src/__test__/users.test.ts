@@ -30,10 +30,21 @@ describe("POST /api/v1/users", () => {
 
 describe("GET /api/v1/users", () => {
   it("return 200 for GET /api/v1/users", async () => {
+    const user1 = await User.create({
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@gmail.com",
+    });
+    const user2 = await User.create({
+      firstName: "Jane",
+      lastName: "Doe",
+      email: "janedoe@gmail.com",
+    });
     const response = await supertest(app).get("/api/v1/users").send();
     expect(response.status).toBe(200);
     expect(response.body).toBeDefined();
     expect(response.body.data).toBeDefined();
+    expect(response.body.data.length).toBe(2);
   });
 });
 
