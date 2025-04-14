@@ -29,7 +29,7 @@ That’s where automated testing comes to the rescue.
 
 However, it is no doubt that automated testing is an essential part of building robust and maintainable applications.
 
-This application covers the basid CRUD endpoints and corresponding test cases using jest and supetest
+This application covers the basic CRUD endpoints and corresponding test cases using jest and supetest
 
 ## Technologies
 
