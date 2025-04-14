@@ -2,7 +2,7 @@ import supertest from "supertest";
 import { app } from "../app";
 import { User } from "../models/user-model";
 
-describe("create user enpoint POST /api/v1/users", () => {
+describe("POST /api/v1/users", () => {
   it("throws error if user data is not provided", async () => {
     const response = await supertest(app).post("/api/v1/users").send({});
 
@@ -28,7 +28,7 @@ describe("create user enpoint POST /api/v1/users", () => {
   });
 });
 
-describe("get all users endpoint GET /api/v1/users", () => {
+describe("GET /api/v1/users", () => {
   it("return 200 for GET /api/v1/users", async () => {
     const response = await supertest(app).get("/api/v1/users").send();
     expect(response.status).toBe(200);
@@ -37,7 +37,7 @@ describe("get all users endpoint GET /api/v1/users", () => {
   });
 });
 
-describe("get user by id enpoint GET /api/v1/users/:id", () => {
+describe("GET /api/v1/users/:id", () => {
   it("returns 404 status and error object if user does not exist", async () => {
     const response = await supertest(app)
       .get("/api/v1/users/123456789012345678901234")
@@ -65,7 +65,7 @@ describe("get user by id enpoint GET /api/v1/users/:id", () => {
   });
 });
 
-describe("update user by id enpoint PUT /api/v1/users/:id", () => {
+describe("PUT /api/v1/users/:id", () => {
   it("returns 400 status and error object if invalid ObjectId is provided", async () => {
     const response = await supertest(app).put("/api/v1/users/wwklslgksg").send({
       firstName: "Jane",
@@ -134,7 +134,7 @@ describe("update user by id enpoint PUT /api/v1/users/:id", () => {
   });
 });
 
-describe("delete user by id enpoint DELETE /api/v1/users/:id", () => {
+describe("DELETE /api/v1/users/:id", () => {
   it("returns 400 status and error object if invalid ObjectId is provided", async () => {
     const response = await supertest(app)
       .delete("/api/v1/users/wwklslgksg")
