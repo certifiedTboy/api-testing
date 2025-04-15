@@ -64,4 +64,6 @@ $ npm run test
 # The app will run on <http://localhost:3000/>
 ```
 
+### Read a comprehensive guide on an article i wrote on [medium](https://medium.com/@etosin70/automated-testing-with-jest-and-supertest-in-node-js-express-typescript-953683d3f5fb)
+
 <a href="">Voila!</a> <a href="#top">Back to top</a>
