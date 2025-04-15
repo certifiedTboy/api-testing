@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
 import { User } from "../models/user-model";
 import { ResponseHandler } from "../lib/response-handlers/response-handler";
-import { CustomError } from "../lib/exceptions/CustomError";
+import { CustomError } from "../lib/exceptions/custom-error";
 
 /**
  * @class UserControllers

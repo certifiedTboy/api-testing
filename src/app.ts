@@ -1,6 +1,6 @@
 import express from "express";
 import { globalErrorHandler } from "./lib/exceptions/global-error-handler";
-import { CustomError } from "./lib/exceptions/CustomError";
+import { CustomError } from "./lib/exceptions/custom-error";
 import { userRoutes } from "./routes/user-route";
 const app = express();
 
